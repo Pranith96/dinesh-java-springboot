@@ -1,0 +1,5 @@
+package com.methodoverriding;
+
+public class Summation extends Addition {
+
+}

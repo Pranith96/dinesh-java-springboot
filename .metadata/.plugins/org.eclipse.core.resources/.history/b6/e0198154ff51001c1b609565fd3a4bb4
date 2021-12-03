@@ -1,0 +1,8 @@
+
+public class BikeImpl1 extends Bike {
+	
+	public void engine() {
+		System.out.println("engine");
+	}
+
+}

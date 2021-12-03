@@ -1,0 +1,8 @@
+
+public abstract class Bike {
+	
+	public void tire() {
+		System.out.println("Tire");
+	}
+
+}

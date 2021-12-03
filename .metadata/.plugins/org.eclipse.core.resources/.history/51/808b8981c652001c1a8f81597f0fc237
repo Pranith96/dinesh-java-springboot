@@ -1,0 +1,8 @@
+package com.methodoverloading;
+
+public class Addition {
+
+	public void add() {
+		System.out.println("Addition add");
+	}
+}

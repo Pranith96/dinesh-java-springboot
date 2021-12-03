@@ -1,0 +1,26 @@
+
+public class BikeImpl implements Bike {
+
+	@Override
+	public void breaks() {
+		System.out.println("Breaks");
+	}
+
+	@Override
+	public void tire() {
+		System.out.println("tire");
+
+	}
+
+	@Override
+	public void engine() {
+		System.out.println("engine");
+
+	}
+
+	@Override
+	public void petrolTank() {
+		System.out.println("petrol tank");
+	}
+
+}

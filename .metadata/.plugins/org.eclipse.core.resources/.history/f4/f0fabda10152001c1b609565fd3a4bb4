@@ -1,0 +1,9 @@
+
+public class MainMethodExample {
+
+	public static void main(String[] args) {
+
+		BikeImpl bike = new BikeImpl();
+	}
+
+}

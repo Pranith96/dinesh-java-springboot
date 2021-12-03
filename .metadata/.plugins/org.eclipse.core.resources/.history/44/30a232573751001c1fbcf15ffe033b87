@@ -1,0 +1,7 @@
+
+public class Summation {
+
+	public void mul() {
+		System.out.println("MUl");
+	}
+}

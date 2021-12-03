@@ -1,0 +1,15 @@
+
+public class MainMethodExample {
+
+	public static void main(String[] args) {
+
+		BikeImpl3 bike = new BikeImpl3();
+		
+		
+		BikeImpl2 bike = new BikeImpl2();
+
+	}
+	
+	
+
+}

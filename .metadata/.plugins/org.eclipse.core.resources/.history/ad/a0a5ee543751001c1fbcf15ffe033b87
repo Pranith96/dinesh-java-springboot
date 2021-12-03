@@ -1,0 +1,7 @@
+
+public class Subtraction extends Addition ,Summation{
+
+	public void hi() {
+		System.out.println("Hi");
+	}
+}

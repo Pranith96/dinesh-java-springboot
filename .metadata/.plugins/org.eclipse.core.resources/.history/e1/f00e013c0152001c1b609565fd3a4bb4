@@ -1,0 +1,27 @@
+
+public class BikeImpl implements Bike{
+
+	@Override
+	public void breaks() {
+		System.out.println("Breaks");
+	}
+
+	@Override
+	public void tire() {
+		System.out.println("tire");
+		
+	}
+
+	@Override
+	public void engine() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void petrolTank() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+
+public class MainMethodExample {
+
+	public static void main(String[] args) {
+
+		BikeImpl bike = new BikeImpl();
+		bike.breaks();
+		bike.engine();
+		bike.headLight();
+		bike.petrolTank();
+		bike.tire();
+	}
+
+}
