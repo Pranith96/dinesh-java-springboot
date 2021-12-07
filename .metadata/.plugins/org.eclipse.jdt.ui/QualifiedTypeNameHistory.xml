@@ -3,4 +3,6 @@
     <fullyQualifiedTypeName name="Subtraction"/>
     <fullyQualifiedTypeName name="com.methodoverloading.Addition"/>
     <fullyQualifiedTypeName name="Address"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.launcher.Main"/>
+    <fullyQualifiedTypeName name="com.accessmodifiers.Addition"/>
 </qualifiedTypeNameHistroy>
