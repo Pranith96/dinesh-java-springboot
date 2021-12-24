@@ -11,4 +11,7 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="Addition"/>
+    <fullyQualifiedTypeName name="AdditionImpl"/>
 </qualifiedTypeNameHistroy>
