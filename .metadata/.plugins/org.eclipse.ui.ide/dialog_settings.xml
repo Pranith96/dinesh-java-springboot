@@ -11,6 +11,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\ramannpr\support_works\Anil-java-hibernate\OptionalClassExample"/>
 			<item value="C:\Users\ramannpr\Algarithms\practice\SynchronizationClassLevelObjectLevel"/>
 			<item value="C:\Users\ramannpr\Algarithms\practice\DeadLock"/>
 			<item value="C:\Users\ramannpr\Algarithms\Algarithms\Thread concepts"/>
