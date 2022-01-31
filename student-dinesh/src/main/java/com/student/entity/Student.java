@@ -1,30 +1,76 @@
 package com.student.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="student_table")
+@Table(name = "student_table")
 public class Student {
 
 	@Id
-	@Column(name="student_id")
+	@Column(name = "student_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer studentId;
-	@Column(name="student_name")
+	@Column(name = "student_name")
 	private String studentName;
-	@Column(name="student_mobile_number")
+	@Column(name = "student_mobile_number")
 	private String mobileNumber;
-	@Column(name="student_email")
+	@Column(name = "student_email")
 	private String email;
-	@Column(name="student_loginid", unique = true)
+	@Column(name = "student_loginid", unique = true)
 	private String loginId;
-	@Column(name="student_password")
+	@Column(name = "student_password")
 	private String password;
+
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "addressId")
+	private Address address;
+
+	@ManyToOne(cascade = CascadeType.ALL, targetEntity = College.class)
+	@JoinColumn(name = "collegeId")
+	private College college;
+
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "student_course", joinColumns = { @JoinColumn(name = "studentId") }, inverseJoinColumns = {
+			@JoinColumn(name = "courseId") })
+	private List<Courses> courses;
+
+	public List<Courses> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(List<Courses> courses) {
+		this.courses = courses;
+	}
+
+	public College getCollege() {
+		return college;
+	}
+
+	public void setCollege(College college) {
+		this.college = college;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	public Integer getStudentId() {
 		return studentId;

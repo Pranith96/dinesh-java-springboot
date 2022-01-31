@@ -20,6 +20,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public String addStudent(Student student) {
+		student.getAddress().setStudent(student);
 		Student response = studentRepository.save(student);
 		if (response == null) {
 			return "data not saved";
