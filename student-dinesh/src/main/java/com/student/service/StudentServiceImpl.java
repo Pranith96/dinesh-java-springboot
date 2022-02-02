@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.student.entity.Student;
+import com.student.exception.StudentNotFoundException;
 import com.student.repository.StudentRepository;
 
 @Service
@@ -32,7 +33,7 @@ public class StudentServiceImpl implements StudentService {
 	public Student getStudent(Integer studentId) {
 		Optional<Student> response = studentRepository.findById(studentId);
 		if (!response.isPresent()) {
-			throw new RuntimeException("Data not exists");
+			throw new StudentNotFoundException("Student details not exists");
 		}
 		return response.get();
 	}
@@ -41,7 +42,7 @@ public class StudentServiceImpl implements StudentService {
 	public List<Student> getStudentName(String studentName) {
 		Optional<List<Student>> response = studentRepository.findByStudentName(studentName);
 		if (!response.isPresent()) {
-			throw new RuntimeException("Data not exists");
+			throw new StudentNotFoundException("Student Details not exists");
 		}
 		return response.get();
 	}
