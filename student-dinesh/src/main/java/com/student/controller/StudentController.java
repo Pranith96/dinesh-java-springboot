@@ -19,6 +19,8 @@ import com.student.dto.StudentDto;
 import com.student.entity.Student;
 import com.student.service.StudentService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/student")
 public class StudentController {
@@ -27,12 +29,14 @@ public class StudentController {
 	StudentService studentService;
 
 	@PostMapping("/save")
+	@ApiOperation(value = "Student account Creation API", notes = "Please provide all the info for Student account creation", response = Student.class)
 	public ResponseEntity<String> createStudent(@RequestBody Student student) {
 		String response = studentService.addStudent(student);
 		return ResponseEntity.status(HttpStatus.CREATED).body(response);
 	}
 
 	@GetMapping("/id/{studentId}")
+	@ApiOperation(value = "Student Details fetch API", notes = "Please provide all the info for Student Details fetch", response = Student.class)
 	public ResponseEntity<StudentDto> getStudent(@PathVariable("studentId") Integer studentId) {
 		Student response = studentService.getStudent(studentId);
 		StudentDto studentDto = new StudentDto();
@@ -56,6 +60,7 @@ public class StudentController {
 	}
 
 	@DeleteMapping("/delete/{studentId}")
+	@ApiOperation(value = "Student Details Delete API", notes = "Please provide all the info for Student Details Delete", response = Student.class)
 	public ResponseEntity<String> deleteStudent(@PathVariable("studentId") Integer studentId) {
 		String response = studentService.deleteStudent(studentId);
 		return ResponseEntity.status(HttpStatus.OK).body(response);

@@ -16,23 +16,33 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name = "student_table")
+@ApiModel(description = "Details About the Students Creation")
 public class Student {
 
 	@Id
 	@Column(name = "student_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ApiModelProperty(notes = "The Unique Student ID  Number")
 	private Integer studentId;
 	@Column(name = "student_name")
+	@ApiModelProperty(notes = "It is the type string for student name")
 	private String studentName;
 	@Column(name = "student_mobile_number")
+	@ApiModelProperty(notes = "It is the type string for student mobile number")
 	private String mobileNumber;
 	@Column(name = "student_email")
+	@ApiModelProperty(notes = "It is the type string for student email")
 	private String email;
 	@Column(name = "student_loginid", unique = true)
+	@ApiModelProperty(notes = "It is the type string for student unique login id")
 	private String loginId;
 	@Column(name = "student_password")
+	@ApiModelProperty(notes = "It is the type string for student password")
 	private String password;
 
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
